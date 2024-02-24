@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Blackjack - Play</title>
+</head>
+<body>
+    <h1>Blackjack - Play</h1>
+    <h2>Your Hand:</h2>
+    <ul>
+        {% for card in player_hand %}
+            <li>{{ card['rank'] }} of {{ card['suit'] }}</li>
+        {% endfor %}
+    </ul>
+    <h2>Dealer's Hand:</h2>
+    <ul>
+        <li>Hidden</li>
+        {% for card in dealer_hand[1:] %}
+            <li>{{ card['rank'] }} of {{ card['suit'] }}</li>
+        {% endfor %}
+    </ul>
+</body>
+</html>
